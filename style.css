@@ -1,0 +1,93 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box
+}
+body{
+    font-family: Tahoma,Arial;
+}
+.slider-container{
+    width:800px;
+    height:250px;
+    margin:10px auto;
+    position: relative;
+
+}
+
+.slider-container img{
+    position: absolute;
+    opacity:0;
+    transition: opacity 1s;
+    z-index: 1;
+    width: 800px;
+    height: 255px;
+    
+}
+.slider-container img.active{
+    opacity:1;
+}
+.slider-container .slide-number{
+    position: absolute;
+    left:10px;
+    top:10px;
+    background-color: rgba(0, 0, 0, .6);
+    color:#FFF;
+    padding:5px 10px;
+    font-size: 20px;
+    z-index: 2;
+    border-radius: 6px;
+}
+.slide-control{
+    width:800px;
+    margin:auto;
+    overflow: hidden;
+}
+.slide-control .prev,
+.slide-control .next{
+    background-color:#009688;
+    color:#FFF;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    padding:5px;
+    user-select: none;
+    width: 20%;
+}
+.slide-control .prev{
+    float: left;
+}
+.slide-control .next{
+    float: right;
+}
+
+.slide-control .prev.disabled,
+.slide-control .next.disabled{
+    background-color:#0096877c;
+    cursor: no-drop;
+}
+.slide-control .indictors{
+    width:60%;
+    float:left;
+}
+.slide-control .indictors ul{
+    list-style:none;
+    margin:0;
+    text-align: center
+}
+.slide-control .indictors ul li{
+    display: inline-block;
+    background-color: #F6F6F6;
+    color:#333;
+    font-weight:bold;
+    height:28px;
+    width:28px;
+    border-radius: 4px;
+    margin:0 2px;
+    line-height: 28px;
+    cursor: pointer;    
+}
+.slide-control .indictors ul li.active{
+    background-color:#009688;
+    color:#fff
+}
